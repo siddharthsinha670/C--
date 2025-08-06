@@ -1,4 +1,4 @@
-//Take input in an array and find the product (multiplication) of all elements.
+//Take  positive input in an array and find the product (multiplication) of all elements.
 
 #include<iostream>
 using namespace std;
