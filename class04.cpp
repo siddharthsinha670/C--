@@ -15,6 +15,7 @@ class student
     }
     void show()
     {
+        
         cout<<"the name and age of the student is: "<<name<<","<<age;
     }
 };
