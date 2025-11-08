@@ -8,35 +8,39 @@ class student
     int age;
     string name;
     public:
-    student()
+    student()//default constructor
     {
-        name=rahul;
-        age=18;
+        name="siddharth";
+        age=21;
     }
-    student(int age1,string name1)
+    student(string n,int a)//parameterized constructor
     {
-        age=age1;
-        name=name1;
+        name=n;
+        age=a;
     }
-    student(student &x)
+    student(student &x) //copy consturctor
     {
         age=x.age;
-        student=x.student;
     }
     void input()
     {
-        cout<<"Ente the name and age of the student:";
+        cout<<"Enter the name of the student and age of the student :";
+        cin>>age>>name;
     }
     void show()
     {
-        cout<<"The name and age of the studnet is given here: "<<name<<"--"<<age;
+        cout<<endl<<"The name and age of the student is:"<< name<<"-->"<<age;
     }
 };
 int main()
 {
-    student stu1;
+    student stu1; //default consturctor
     stu1.show();
-    student stu2(siddharth,21);
-    stu2.show()
+    student stu2("rahul",31);  //parameter constructor
+    stu2.show(); 
+    student stu3("sona", 13);
+    stu3.show();
+    student stu4(stu3);
+    stu4.show();
     return 0;
 }
