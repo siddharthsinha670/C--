@@ -18,9 +18,14 @@ class son: public dad
     public:
     void show()
     {
-        money=40000
+        money=40000;
         cout<<"Son money "<<money<<endl;
         cout<<"Dad money "<<amount;
+    }
+    void add(A r)
+    {
+        c=r.a+r.b;
+        cout<<c;
     }
 };
 int main()
