@@ -81,13 +81,13 @@ public:
 };
 void showDetails(LibraryItem &item)
 {
-    cout<<"\n[Friend Funcction Access]";
+    cout << "\n[Friend Funcction Access]";
     item.display();
 }
-//Static Member
+// Static Member
 class Library
 {
-    public:
+public:
     static int totalItems;
 
     Library()
@@ -96,38 +96,36 @@ class Library
     }
     static void showTotal()
     {
-        cout<<"\ntotal items:" << totalItems <<endl;
+        cout << "\ntotal items:" << totalItems << endl;
     }
 };
-int Library:: totalItems =0;
-//main
+int Library::totalItems = 0;
+// main
 int main()
 {
-    //Dynamic POlymorphism
-    LibraryItem* item1;
-    LibraryItem* item2;
+    // Dynamic POlymorphism
+    LibraryItem *item1;
+    LibraryItem *item2;
 
-    item1=new Book("c++ programming", 101, "bjrane Stroustrup");
-    item2=new Magazine("Tecch MOnthly",202,45);
+    item1 = new Book("c++ programming", 101, "bjrane Stroustrup");
+    item2 = new Magazine("Tecch MOnthly", 202, 45);
 
-    //using object
+    // using object
     item1->display();
     item1->issueItem();
 
     item2->display();
     item2->issueItem();
 
-    //function friend
+    // function friend
     showDetails(*item1);
 
-    //static Example
-    Library I1,I2;
+    // static Example
+    Library I1, I2;
     Library::showTotal();
 
     delete item1;
     delete item2;
 
     return 0;
-
 }
-
